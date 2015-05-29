@@ -22,7 +22,12 @@
     <div class="food_container">
       <h2>
         &#9711; <%= food["name"] %>
+        <a href="/groceries/delete/<%= food["id"] %>">
+          <small class="delete">x</small>
+        </a>
       </h2>
+      <div>
+      </div>
     </div>
   <% end %>
 </div>

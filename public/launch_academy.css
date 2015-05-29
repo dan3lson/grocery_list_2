@@ -19,6 +19,9 @@ body {
   position: fixed;
   width: 100%;
 }
+#grocery_container {
+  /* display: block; */
+}
 a {
   text-decoration: none;
   color: rgb(203, 222, 230);
@@ -45,7 +48,7 @@ input:last-child{
   border: 1px solid ;
   background: #FFF;
 }
-span {
+.delete, span {
   color: #F2F2F2;
 }
 #letter{

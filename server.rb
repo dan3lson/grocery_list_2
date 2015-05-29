@@ -45,7 +45,8 @@ def filtered_foods(letter)
     SELECT groceries.name
     FROM groceries
     WHERE groceries.name LIKE '#{letter}%'
-    ", "exec", nil)
+    ", "exec", nil
+  )
 end
 
 def add_food(name)
@@ -73,6 +74,17 @@ get "/groceries/:letter" do
     active_letter: letter,
     filtered_letters: grocery_first_letters,
     filtered_foods: filtered_foods(letter) }
+end
+
+get "/groceries/delete/:food_id" do
+  food = params[:food_id]
+  sql("
+    DELETE FROM groceries
+    WHERE groceries.id = #{food}
+  ", "exec", nil
+  )
+
+  redirect "/groceries"
 end
 
 post "/groceries" do
