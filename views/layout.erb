@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Groceries List 2</title>
+  <link rel="stylesheet" href="/launch_academy.css">
+</head>
+  <body>
+    <div id="header">
+      <img src="/shopping_cart.png" alt="Grocery Shopping Cart" />
+      <div>
+        <form action="/groceries" method="post">
+          <label for="food" />
+          <input
+            type="text"
+            id="food"
+            name="food"
+            maxlength="50"
+            required />
+          <input type="submit" value="Add" />
+        </form>
+      </div>
+    </div>
+    <div id="master_container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

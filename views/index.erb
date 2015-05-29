@@ -1,0 +1,28 @@
+<h1>
+  Groceries
+</h1>
+
+<a href="/groceries">
+  all
+</a>
+
+<span> &#8594;</span>
+
+<% filtered_letters.each do |letter| %>
+    <a href="/groceries/<%= letter %>">
+      <%= letter %>
+    </a>
+    <span class="pipe">
+      |
+    </span>
+<% end %>
+
+<div id="grocery_container">
+  <% groceries.each do |food| %>
+    <div class="food_container">
+      <h2>
+        &#9711; <%= food["name"] %>
+      </h2>
+    </div>
+  <% end %>
+</div>
